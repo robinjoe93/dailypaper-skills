@@ -143,7 +143,10 @@ def extract_figure_url(html: str, arxiv_id: str) -> str:
         if url.startswith("/"):
             url = "https://arxiv.org" + url
         elif not url.startswith("http"):
-            url = "https://arxiv.org/html/" + url
+            if re.match(r"\d{4}\.\d{4,5}v\d+/", url):
+                url = "https://arxiv.org/html/" + url
+            else:
+                url = f"https://arxiv.org/html/{arxiv_id}/" + url
         return url
     return ""
 

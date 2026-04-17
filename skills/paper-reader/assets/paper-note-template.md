@@ -6,7 +6,7 @@ year: {Year}
 venue: {Venue}
 tags: [{tags}]
 zotero_collection: {zotero_path}
-image_source: online  # online（默认）/ mixed / local
+image_source: online  # 始终为 online，不使用本地图片
 arxiv_html: {arxiv_html_url}  # 如有
 created: {date}
 ---
@@ -124,25 +124,24 @@ $$
 
 ## 关键图表
 
-<!-- 图片：下载到本地 assets/ 文件夹，用 ![[]] wikilink 嵌入 -->
-<!-- 命名规范: {方法名}_fig{N}_{英文描述}.png -->
-<!-- 下载后必须验证：文件 >10KB、Read 确认内容正确 -->
+<!-- 图片：只用外链 URL，不下载到本地 -->
+<!-- 来源: arXiv HTML / 项目主页，提取 img src URL -->
 
 ### Figure 1: Overview / 系统概览
 
-![[{MethodName}_fig1_overview.png]]
+![Figure 1]({figure1_url})
 
 **说明**: {方法名} 的整体架构。输入 {输入内容}，通过 [[{核心技术}]] 处理，输出 {输出内容}。
 
 ### Figure 2: Model Architecture / 模型架构
 
-![[{MethodName}_fig2_architecture.png]]
+![Figure 2]({figure2_url})
 
 **说明**: 展示 [[{模块名}]] 的详细结构。{核心设计点}。
 
 ### Figure 3: Experiment Results / 实验结果
 
-![[{MethodName}_fig3_results.png]]
+![Figure 3]({figure3_url})
 
 **说明**: {实验的关键发现}，{方法名} 在 {指标} 上超越 baseline {百分比}。
 
